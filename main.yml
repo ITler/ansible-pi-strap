@@ -1,0 +1,11 @@
+---
+  - hosts: all
+    become_method: sudo
+
+    pre_tasks:
+      - debug:
+          var: hostvars
+          verbosity: 1
+
+    roles:
+      - { role: ../pi-strap }
